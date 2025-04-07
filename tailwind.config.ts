@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Theme colors
+				anime: {
+					pink: '#FFD6E0',
+					yellow: '#FFF9C4',
+					blue: '#D4E6F1',
+					purple: '#E8D6FF',
+					cream: '#FFF8E1',
+					rose: '#FFDCE5',
+					mint: '#D4F1E4',
+					peach: '#FFE5D4'
 				}
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'lato': ['Lato', 'sans-serif'],
+				'mplus': ['M PLUS Rounded 1c', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +101,40 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-soft': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'typing': {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				'blink': {
+					'from, to': { borderColor: 'transparent' },
+					'50%': { borderColor: 'hsl(var(--primary))' }
+				},
+				'heart-float': {
+					'0%': { transform: 'translateY(0) scale(1)', opacity: '0' },
+					'50%': { transform: 'translateY(-40px) scale(1.2)', opacity: '0.8' },
+					'100%': { transform: 'translateY(-80px) scale(1)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-soft': 'pulse-soft 4s ease-in-out infinite',
+				'typing': 'typing 3.5s steps(40, end), blink .75s step-end infinite',
+				'heart-float': 'heart-float 3s ease-out forwards'
+			},
+			backgroundImage: {
+				'gradient-soft': 'linear-gradient(90deg, var(--tw-gradient-stops))',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			}
 		}
 	},
