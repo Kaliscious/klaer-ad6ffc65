@@ -62,7 +62,7 @@ const Profile = () => {
                     <ProfileDetail 
                       icon={<Ruler className="w-5 h-5 text-anime-pink" />}
                       label="Height"
-                      value="5'7""
+                      value="5'7&quot;"
                     />
                     
                     <ProfileDetail 
