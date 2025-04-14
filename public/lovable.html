@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Klara - Kahlil's World</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional page-specific styles for Klara's page */
+        .lovable-page {
+            background: linear-gradient(135deg, rgba(255,220,235,0.5) 0%, rgba(255,192,203,0.5) 100%);
+        }
+        
+        .lovable-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .heart-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .heart-title::before,
+        .heart-title::after {
+            content: "♥";
+            color: #FF99B4;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+        }
+        
+        .heart-title::before {
+            left: -3rem;
+        }
+        
+        .heart-title::after {
+            right: -3rem;
+        }
+        
+        .love-message {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(255, 153, 180, 0.3);
+            text-align: center;
+            position: relative;
+        }
+        
+        .love-message::before {
+            content: "♥";
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FF99B4;
+            font-size: 2rem;
+            background: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .love-letter {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: #FF99B4;
+        }
+    </style>
+</head>
+<body class="heart-cursor lovable-page">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Kahlil's World</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="hobbies.html" class="nav-link">Hobbies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="lovable.html" class="nav-link special active">Klara</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="main">
+        <div class="page-container">
+            <div class="lovable-header">
+                <h1 class="heart-title">For Klara</h1>
+                <p class="subtitle">My special person and the one who holds my heart</p>
+            </div>
+            
+            <div class="love-message">
+                <div class="love-letter">
+                    <p>Dear Klara,</p>
+                    <p>
+                        This page is dedicated to you, the most special person in my life. 
+                        Every moment with you feels like a scene from the most beautiful anime, 
+                        filled with joy, laughter, and love.
+                    </p>
+                    <p>
+                        Thank you for being my partner, my best friend, and my inspiration. 
+                        You make every day brighter just by being in it.
+                    </p>
+                    <p>
+                        I've created this entire website to share a bit of my world with everyone, 
+                        but this page is special—it's just for you. A small token of how much you 
+                        mean to me, and how grateful I am to have you in my life.
+                    </p>
+                    <p>
+                        With all my heart,
+                    </p>
+                </div>
+                <div class="signature">Kahlil</div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Kahlil's World. All rights reserved.</p>
+                <p>Built with <span class="heart">♥</span> for Klara</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
