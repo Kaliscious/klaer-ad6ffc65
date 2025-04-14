@@ -6,89 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Klara - Kahlil's World</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Additional page-specific styles for Klara's page */
-        .lovable-page {
-            background: linear-gradient(135deg, rgba(255,220,235,0.5) 0%, rgba(255,192,203,0.5) 100%);
-        }
-        
-        .lovable-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .heart-title {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .heart-title::before,
-        .heart-title::after {
-            content: "♥";
-            color: #FF99B4;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-        }
-        
-        .heart-title::before {
-            left: -3rem;
-        }
-        
-        .heart-title::after {
-            right: -3rem;
-        }
-        
-        .love-message {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 1rem;
-            box-shadow: 0 4px 20px rgba(255, 153, 180, 0.3);
-            text-align: center;
-            position: relative;
-        }
-        
-        .love-message::before {
-            content: "♥";
-            position: absolute;
-            top: -1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #FF99B4;
-            font-size: 2rem;
-            background: white;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .love-letter {
-            font-family: 'Playfair Display', serif;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-        
-        .signature {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            color: #FF99B4;
-        }
-    </style>
+    <link rel="stylesheet" href="klara.css">
 </head>
-<body class="heart-cursor lovable-page">
+<body>
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">Kahlil's World</a>
@@ -102,37 +25,290 @@
         </div>
     </nav>
     
-    <main class="main">
-        <div class="page-container">
-            <div class="lovable-header">
-                <h1 class="heart-title">For Klara</h1>
-                <p class="subtitle">My special person and the one who holds my heart</p>
-            </div>
-            
-            <div class="love-message">
-                <div class="love-letter">
-                    <p>Dear Klara,</p>
-                    <p>
-                        This page is dedicated to you, the most special person in my life. 
-                        Every moment with you feels like a scene from the most beautiful anime, 
-                        filled with joy, laughter, and love.
-                    </p>
-                    <p>
-                        Thank you for being my partner, my best friend, and my inspiration. 
-                        You make every day brighter just by being in it.
-                    </p>
-                    <p>
-                        I've created this entire website to share a bit of my world with everyone, 
-                        but this page is special—it's just for you. A small token of how much you 
-                        mean to me, and how grateful I am to have you in my life.
-                    </p>
-                    <p>
-                        With all my heart,
-                    </p>
-                </div>
-                <div class="signature">Kahlil</div>
+    <header class="klara-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="klara-title">Klara Heléne Schlüter</h1>
+                <p class="subtitle">The love of my life and inspiration</p>
             </div>
         </div>
+    </header>
+    
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <div class="image-placeholder">K</div>
+                    </div>
+                    <div class="profile-details">
+                        <h2>About Klara</h2>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Nationality:</span>
+                                <span class="info-value">¾ Filipino, ¼ German</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Birthday:</span>
+                                <span class="info-value">June 9, 2008</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Birthplace:</span>
+                                <span class="info-value">Saitama, Japan</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Dream Job:</span>
+                                <span class="info-value">Architect or Marine Biologist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hobbies-section">
+            <div class="container">
+                <h2 class="section-title">Hobbies & Interests</h2>
+                <div class="hobby-cards">
+                    <div class="hobby-card">
+                        <div class="hobby-icon">🎨</div>
+                        <h3>Drawing & Painting</h3>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon">🎵</div>
+                        <h3>Listening to Music</h3>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon">💻</div>
+                        <h3>Digital Art</h3>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon">🎬</div>
+                        <h3>Editing</h3>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon">🛒</div>
+                        <h3>Online Shopping</h3>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon">✨</div>
+                        <h3>Skincare</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="favorites-section">
+            <div class="container">
+                <h2 class="section-title">Favorites</h2>
+                <div class="favorites-grid">
+                    <div class="favorite-card">
+                        <h3>Food</h3>
+                        <ul>
+                            <li>Seafood</li>
+                            <li>Noodles</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Colors</h3>
+                        <ul>
+                            <li>Red</li>
+                            <li>Yellow</li>
+                            <li>Pink</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Animal</h3>
+                        <ul>
+                            <li>Orca</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Streamer</h3>
+                        <ul>
+                            <li>Caseoh</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Flowers</h3>
+                        <ul>
+                            <li>Sunflower</li>
+                            <li>Baby's breath</li>
+                            <li>Daffodils</li>
+                            <li>Yellow poppy</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Game Genre</h3>
+                        <ul>
+                            <li>Psychological indie horror</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Characters</h3>
+                        <ul>
+                            <li>Keroppi</li>
+                            <li>Tifa Lockhart</li>
+                            <li>Spiderman</li>
+                            <li>Deadpool</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Disney Princesses</h3>
+                        <ul>
+                            <li>Tiana</li>
+                            <li>Belle</li>
+                        </ul>
+                    </div>
+                    <div class="favorite-card">
+                        <h3>Subjects</h3>
+                        <ul>
+                            <li>Arts</li>
+                            <li>Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="social-section">
+            <div class="container">
+                <h2 class="section-title">Connect with Klara</h2>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <span class="social-icon">📷</span>
+                        <span class="social-name">Instagram</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="social-icon">🎮</span>
+                        <span class="social-name">Discord</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="social-icon">✉️</span>
+                        <span class="social-name">Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="achievements-section">
+            <div class="container">
+                <h2 class="section-title">Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-column">
+                        <ul class="achievement-list">
+                            <li>Grade 6, 7, 9 Honors (Rank 4 in Grade 9)</li>
+                            <li>Grade 9 Class Secretary</li>
+                            <li>Grade 10 Class President</li>
+                            <li>Ms. Tech High 1st Runner-Up</li>
+                            <li>1st Place Poster Making (2022), 2nd Place (2024)</li>
+                            <li>Visage Runway (2023)</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-column">
+                        <ul class="achievement-list">
+                            <li>Outstanding Digital Designers Club Member (2023)</li>
+                            <li>Theology Catequiz 4th Runner-Up</li>
+                            <li>Y.E.S. Member</li>
+                            <li>Family Day Billiards Runner-Up</li>
+                            <li>Speaker for Stations of the Cross</li>
+                            <li>Implemented Class Funds & joined multiple committees</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="memories-section">
+            <div class="container">
+                <h2 class="section-title">Our Memories</h2>
+                <div class="memories-text">
+                    <p>Every moment with you becomes a treasured memory. Here are some of the most special ones:</p>
+                </div>
+                <div class="memories-grid">
+                    <div class="memory-card">
+                        <h3>First Date</h3>
+                        <p>That nervous but magical evening when everything began</p>
+                    </div>
+                    <div class="memory-card">
+                        <h3>Late Night Talks</h3>
+                        <p>Staying up until 3 AM talking about life, dreams, and everything in between</p>
+                    </div>
+                    <div class="memory-card">
+                        <h3>Art Collaborations</h3>
+                        <p>Creating beautiful artwork together, each bringing our unique styles</p>
+                    </div>
+                    <div class="memory-card">
+                        <h3>Valentine's Day</h3>
+                        <p>Roses, chocolates, and heartfelt letters that made the day unforgettable</p>
+                    </div>
+                    <div class="memory-card">
+                        <h3>Surprise Visit</h3>
+                        <p>When I showed up unexpectedly with your favorite snacks</p>
+                    </div>
+                    <div class="memory-card">
+                        <h3>School Moments</h3>
+                        <p>Those brief encounters in the hallway that brightened my entire day</p>
+                    </div>
+                </div>
+                <div class="view-all-photos">
+                    <a href="photos.html" class="photos-link">View All Photos</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Photo Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 1</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 2</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 3</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="message-section">
+            <div class="container">
+                <div class="love-letter">
+                    <h2>My Dearest Klara,</h2>
+                    <p>
+                        Every moment with you feels like the perfect scene from a romantic story - full of warmth, 
+                        joy, and those little magical moments that make my heart skip a beat.
+                    </p>
+                    <p>
+                        You inspire me every day with your creativity, kindness, and beautiful spirit.
+                        I'm so proud of all your achievements and can't wait to see all the amazing 
+                        things you'll accomplish in the future.
+                    </p>
+                    <p>
+                        I cherish every memory we create together and look forward to making countless more.
+                        You're my real-life romance, and I'm the luckiest person in the world.
+                    </p>
+                    <div class="signature">
+                        <p>With all my love,</p>
+                        <p class="sign">Kahlil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer class="footer">

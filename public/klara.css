@@ -1,0 +1,769 @@
+
+/* Klara Page Specific Styles */
+:root {
+    --pink-light: #FFDEE2;
+    --pink-medium: #FFB6C1;
+    --pink-dark: #FF99B4;
+    --yellow-light: #FEF7CD;
+    --yellow-medium: #FFEAA7;
+    --cream: #FFF9E6;
+    --gray-light: #F8F9FA;
+    --shadow: rgba(255, 153, 180, 0.3);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--cream);
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+    cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23FF99B4'/%3E%3C/svg%3E"), auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.klara-header {
+    background: linear-gradient(135deg, rgba(255,222,226,0.7) 0%, rgba(255,182,193,0.7) 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.klara-header::before,
+.klara-header::after {
+    content: "♥";
+    position: absolute;
+    color: rgba(255, 153, 180, 0.2);
+    font-size: 120px;
+    z-index: 0;
+}
+
+.klara-header::before {
+    top: 10%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.klara-header::after {
+    bottom: 10%;
+    right: 10%;
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.klara-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1.5s;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #666;
+    animation: fadeInUp 1.5s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+    position: relative;
+}
+
+section:nth-child(even) {
+    background-color: var(--gray-light);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--pink-light), var(--pink-dark));
+}
+
+/* Profile Section */
+.profile-section {
+    background-color: white;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow);
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+    animation: fadeIn 1s;
+}
+
+@media (min-width: 768px) {
+    .profile-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.profile-image {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .profile-image {
+        margin-bottom: 0;
+        margin-right: 40px;
+    }
+}
+
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink-light), var(--yellow-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: white;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-weight: bold;
+    color: var(--pink-dark);
+    margin-bottom: 5px;
+}
+
+.info-value {
+    color: #333;
+}
+
+/* Hobbies Section */
+.hobby-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hobby-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hobby-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Favorites Section */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.favorite-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.favorite-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--pink-dark);
+    border-bottom: 2px solid var(--pink-light);
+    padding-bottom: 5px;
+}
+
+.favorite-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.favorite-card li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.favorite-card li::before {
+    content: "♥";
+    position: absolute;
+    left: 0;
+    color: var(--pink-medium);
+}
+
+/* Social Section */
+.social-section {
+    background: linear-gradient(135deg, var(--pink-light), var(--yellow-light));
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-name {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.achievement-list {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.achievement-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.achievement-list li::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+/* Memories Section */
+.memories-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.memory-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.memory-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--pink-dark);
+}
+
+.memory-card p {
+    color: #666;
+}
+
+.view-all-photos {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.photos-link {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    background-color: var(--pink-medium);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.photos-link:hover {
+    background-color: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.photo-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, var(--pink-light), var(--yellow-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Message Section */
+.message-section {
+    background: linear-gradient(135deg, rgba(255,222,226,0.5) 0%, rgba(255,222,226,0.7) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.message-section::before,
+.message-section::after {
+    content: "♥";
+    position: absolute;
+    color: rgba(255, 153, 180, 0.1);
+    font-size: 120px;
+}
+
+.message-section::before {
+    top: 10%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.message-section::after {
+    bottom: 10%;
+    right: 10%;
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.love-letter {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px var(--shadow);
+    position: relative;
+    z-index: 1;
+}
+
+.love-letter h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--pink-dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.love-letter p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.signature p {
+    margin-bottom: 5px;
+}
+
+.sign {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--pink-dark);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.heart {
+    color: var(--pink-dark);
+}
+
+/* Animation Classes */
+.fadeIn {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Create a photos page */
+<lov-write file_path="public/photos.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klara Photo Gallery - Kahlil's World</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="klara.css">
+    <style>
+        .photos-header {
+            background: linear-gradient(135deg, rgba(255,222,226,0.7) 0%, rgba(255,182,193,0.7) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .gallery-container {
+            padding: 80px 0;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .photo-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-placeholder {
+            height: 300px;
+            background: linear-gradient(135deg, var(--pink-light), var(--yellow-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+        }
+        
+        .photo-caption {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .back-button {
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            background-color: var(--pink-medium);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            margin-top: 50px;
+        }
+        
+        .back-button:hover {
+            background-color: var(--pink-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Kahlil's World</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="hobbies.html" class="nav-link">Hobbies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="lovable.html" class="nav-link special active">Klara</a>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="photos-header">
+        <div class="container">
+            <h1 class="klara-title">Our Photo Gallery</h1>
+            <p class="subtitle">Memories captured in time</p>
+        </div>
+    </header>
+    
+    <main>
+        <section class="gallery-container">
+            <div class="container">
+                <div class="photo-grid">
+                    <!-- You can replace these with actual photos -->
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 1</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>First date at the park</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 2</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>School dance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 3</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>Beach day</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 4</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>Birthday celebration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 5</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>Art class together</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 6</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>Valentine's Day</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 7</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>Study date</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 8</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>Mall day</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <span>Photo 9</span>
+                        </div>
+                        <div class="photo-caption">
+                            <p>Picnic in the park</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="lovable.html" class="back-button">Back to Klara's Page</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Kahlil's World. All rights reserved.</p>
+                <p>Built with <span class="heart">♥</span> for Klara</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
